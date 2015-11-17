@@ -1,0 +1,8 @@
+  <%= form_for @tweet do |f| %>
+      <h3>
+        <%= f.label :Tweet %><br>
+        <%= f.text_area :content %>
+      </h3>
+      <%= submit_tag 'Submit' %>
+  <% end %>
+  

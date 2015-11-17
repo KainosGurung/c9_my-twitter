@@ -1,0 +1,16 @@
+<% if @tweet.nil? %>
+<h1>User not found</h1>
+<% else %>
+User ID: <%= @tweet.user_id %><br>
+<table border="2" width=300 height=300>
+    <tr>
+        <td>
+            Content: <%= @tweet.content %><br>
+        </td>
+    </tr>
+</table>
+
+Likes: <%= @tweet.likes %><br>
+Dislikes: <%= @tweet.dislikes %><br>
+ReTweets: <%= @tweet.retweets %><br>
+<% end %>
