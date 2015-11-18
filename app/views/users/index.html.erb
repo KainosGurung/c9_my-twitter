@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+ID: <%= user.id %><br>
+Email: <%= user.email %><br>
+Sign in Count: <%= user.sign_in_count %><br>
+Last signed in at: <%= user.last_sign_in_at %><br>
+<br><br><br>
+<% end %>

@@ -67,25 +67,26 @@
       </div>
     </div>
 
-  <% if user_signed_in? %>
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Tweets</h3>
-            <ul class="nav nav-list">
-              <li><%= link_to "Create New Tweet", new_tweet_path  %></li>
-              <li><%= link_to "View All Tweets", tweets_path  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+        <% if user_signed_in? %>
+          <div class="col-lg-3">
+            <div class="well sidebar-nav">
+              <h3>Tweets</h3>
+              <ul class="nav nav-list">
+                <li><%= link_to "Create New Tweet", new_tweet_path  %></li>
+                <li><%= link_to "View All Tweets", tweets_path  %></li>
+                <li><%= link_to "View all Users", users_path  %></li>
+              </ul>
+            </div><!--/.well -->
+          </div><!--/span-->
+        <% end %>
       </div><!--/row-->
-  <% end %>
+
       <footer>
         <p>&copy; Company 2015</p>
       </footer>
